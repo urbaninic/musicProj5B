@@ -7,10 +7,10 @@ public class Brano {
     private String titolo;
     private String genere;
     private String autore;
-    private String datapubblicazione; //provvisioramente setttato a string
+    private String datapubblicazione; // settato a string
 
 
-    // INIZIO METODI GETTER
+    // METODI GETTER:
     public String getTitolo() {
         return titolo;
     }
@@ -25,8 +25,14 @@ public class Brano {
     }
     // FINE METODI GETTER
     //Costruttore
-    public Brano ()//definire costruttore -> brackets | 14.01.2022 -> fare costruttore
-    {
-
+    public Brano (String tit, String gen, String aut, String datapub){
+        // Convenzione -> data di pubblicazione -> String
+        //definire costruttore -> brackets | 14.01.2022 -> fare costruttore
+        //fare metodo to string in classe _> necessario per concatenare stringa. TUTTI GLI OGGETTI HANNO metodo toString()
+            this.titolo = tit;
+            this.genere = gen;
+            this.autore = aut;
+            this.datapubblicazione = datapub;
+            //        android:entries="@array/generi"  da mettere su spinner
     }
 }

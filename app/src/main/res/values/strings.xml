@@ -1,9 +1,3 @@
 <resources>
     <string name="app_name">musicProj5B</string>
-
-        <string-array name="generi">
-            <item>Pop</item>
-            <item>Rock</item>
-            <item>Popolare</item>
-        </string-array>
 </resources>
