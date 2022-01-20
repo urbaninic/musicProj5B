@@ -33,6 +33,6 @@ public class Brano {
             this.genere = gen;
             this.autore = aut;
             this.datapubblicazione = datapub;
-            //        android:entries="@array/generi"  da mettere su spinner
+            //        android:entries="@array/generi"  da mettere su spinner - dà errore
     }
 }

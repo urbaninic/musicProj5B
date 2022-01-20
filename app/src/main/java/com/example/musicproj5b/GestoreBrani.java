@@ -9,8 +9,7 @@ public class GestoreBrani {
         listaBrani = new ArrayList<Brano>();
     }
     public void addBrano() {
-       // Brano b = new Brano(titolo , autore, datapubblicazione, genere);
-      //  listaBrani.add(b);
+        listaBrani.add(Brano b);
     }
     public void ListaBrani(){
         StringBuilder stBui = new StringBuilder();

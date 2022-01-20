@@ -16,10 +16,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnInserisci;
     EditText txtTitolo;
     GestoreBrani gb;
-    Spinner spnGenere;
+    Spinner spnGenere; //elemento dell'interfaccia utente che consente di selezionare rapidamente un valore da un set. È simile a un elenco a discesa.
     ArrayAdapter<String> aaG;
 
-    String[] generi = {"Pop", "Trap", "Rap", "Dance"};
+    String[] generi = {"Pop", "Trap", "Rap", "Dance"};  // array generi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         // valori inizializzati quando c'è oncreate
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         gb = new GestoreBrani(); //istanza che prepara arraylist
         spnGenere = (Spinner)findViewById(R.id.spnGeneri);
 
@@ -38,9 +37,10 @@ public class MainActivity extends AppCompatActivity {
         spnGenere.setAdapter(aaG);
         txtTitolo = (EditText)findViewById(R.id.txtTitolo);
         btnInserisci = findViewById(R.id.btnInserisci);
-        spnGenere=(Spinner)findViewById(R.id.spnGeneri);
 
-        //btnVisualizza
+        //btnVisualizza: cosa fa? bottone che visualizza nuova acvtivity (.java + xml) con playlist
+
+
 
         btnInserisci.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
                 String genselezionato = spnGenere.getSelectedItem().toString(); //metodo to string per prendere valore selezionato. RIGA PER CONOSCERE LA SELEZIONE DI USER
                 Toast.makeText(getApplicationContext(), genselezionato, Toast.LENGTH_LONG).show();
                 //segue istanza addbrano
+
+                String genere =
+                spnGenere.getSelectedItem().toString(); //restituisce elemento selezionato
+                String tit = txtTitolo.getText().toString();
+                String aut = autore.getText().toString();
+                String gen = spnGenere.getSelectedItem().toString();
+                Brano b = new Brano(tit , aut, datapub, gen);
+
                 gb.addBrano(); //prende titolo, data pubblicazione.
                 // cio lo aggiunge allarraylist. ORA AGGIUGNERE AL FILE
 
