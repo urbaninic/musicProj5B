@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         // ora associarlo allo spinner
         spnGenere.setAdapter(aaG);
         txtTitolo = (EditText)findViewById(R.id.txtTitolo);
+        txtAutore = (EditText)findViewById(R.id.txtAutore);
         btnInserisci = findViewById(R.id.btnInserisci);
 
         //btnVisualizza: cosa fa? bottone che visualizza nuova acvtivity (.java + xml) con playlist
@@ -48,11 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 String genselezionato = spnGenere.getSelectedItem().toString(); //metodo to string per prendere valore selezionato. RIGA PER CONOSCERE LA SELEZIONE DI USER
                 Toast.makeText(getApplicationContext(), genselezionato, Toast.LENGTH_LONG).show();
                 //segue istanza addbrano
-
-                String genere =
                 spnGenere.getSelectedItem().toString(); //restituisce elemento selezionato
                 String tit = txtTitolo.getText().toString();
-                String aut = autore.getText().toString();
+                String aut = txtAutore.getText().toString();
                 String gen = spnGenere.getSelectedItem().toString();
                 Brano b = new Brano(tit , aut, datapub, gen);
 
