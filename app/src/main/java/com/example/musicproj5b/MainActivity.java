@@ -15,6 +15,7 @@ import java.lang.reflect.Array;
 public class MainActivity extends AppCompatActivity {
     Button btnInserisci;
     EditText txtTitolo;
+    EditText txtAutore;
     GestoreBrani gb;
     Spinner spnGenere; //elemento dell'interfaccia utente che consente di selezionare rapidamente un valore da un set. È simile a un elenco a discesa.
     ArrayAdapter<String> aaG;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 String tit = txtTitolo.getText().toString();
                 String aut = txtAutore.getText().toString();
                 String gen = spnGenere.getSelectedItem().toString();
-                Brano b = new Brano(tit , aut, datapub, gen);
+                Brano b = new Brano(tit, aut, gen);
 
                 gb.addBrano(); //prende titolo, data pubblicazione.
                 // cio lo aggiunge allarraylist. ORA AGGIUGNERE AL FILE
