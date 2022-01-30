@@ -8,18 +8,24 @@ public class GestoreBrani {
     public GestoreBrani(){
         listaBrani = new ArrayList<Brano>();
     }
-    public void addBrano() {
-        listaBrani.add(Brano b);
+
+    public void addBrano(Brano b) {
+        listaBrani.add(b);
     }
-    public void ListaBrani(){
-        StringBuilder stBui = new StringBuilder();
+
+    public String listaBrani(){
+        //  istanza di StringBuilder
+        StringBuilder sb = new StringBuilder();
+        // stessa cosa di foreach JAVA!
         for(Brano brV : listaBrani)
         {
-            stBui.append(brV.toString());
-            stBui.append("\n"); // serve l'INVIO!!
+            sb.append(brV.toString());
+            sb.append("\n"); // serve l'INVIO!!
         }
+        return sb.toString();
     }
 }
 //brano istanziano dall OnCick in gestore brani
 
 //CONFRONTARE FOREACH PHP e RIGA 17
+

@@ -25,6 +25,9 @@ public class Brano {
     }
     // FINE METODI GETTER
     //Costruttore
+    /*public Brano (String titolo){
+        this.titolo=titolo;
+    }*/
     public Brano (String tit, String gen, String aut){
         // Convenzione -> data di pubblicazione -> String
         //definire costruttore -> brackets | 14.01.2022 -> fare costruttore
@@ -34,5 +37,14 @@ public class Brano {
             this.autore = aut;
            // this.datapubblicazione = datapub;
             //        android:entries="@array/generi"  da mettere su spinner - dà errore
+    }
+
+    @Override
+    public String toString() {
+        return "Brano{" +
+                "titolo='" + titolo + '\'' +
+                ", genere='" + genere + '\'' +
+                ", autore='" + autore + '\'' +
+                '}';
     }
 }
